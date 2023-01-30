@@ -34,14 +34,16 @@ export const ProductCard = ({ children, product, className, style, onChange, val
                 style={style}
             >
 
-                {children({
-                    count: counter,
-                    isMaxCountReached,
-                    maxCount: initialValues?.maxCount,
-                    product,
-                    increaseBy,
-                    reset
-                })}
+                {
+                    children({
+                        count: counter,
+                        isMaxCountReached,
+                        maxCount: initialValues?.maxCount,
+                        product,
+                        increaseBy,
+                        reset
+                    })
+                }
 
             </div>
         </Provider>
